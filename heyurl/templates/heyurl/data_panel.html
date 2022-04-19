@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Panel</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'heyurl/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'heyurl/style.css' %}">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-sm-4">
+      <a class="navbar-brand" href="#">HeyURL!</a>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-8 offset-sm-2">
+
+          <div class="card mb-sm-4">
+            <div class="card-header">
+              Current URLs
+            </div>
+            <div class="card-body">
+                <table class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">Short URL</th>
+                      <th scope="col">Clicks this month</th>
+                      <th scope="col">Safari Total </th>
+                      <th scope="col">Chrome Count</th>
+                      <th scope="col">Firefox Total </th>
+                      <th scope="col">Mobile Total</th>
+                      <th scope="col">PC Total</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <td>{{url}}</td>
+                        <td>{{clicks}}</td>
+                        <td>{{safari}}</td>
+                        <td>{{chrome}}</td>
+                        <td>{{firefox}}</td>
+                        <td>{{mobile}}</td>
+                        <td>{{pc}}</td>
+                      </tr>
+                  </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
